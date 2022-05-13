@@ -37,6 +37,8 @@ def get_img(x):
                    'Имя кандидата:' + data["name"] + '\n' + \
                    'Позиция кандидата:' + data["position"] + '\n' + \
                    'Навыки через запятую:' + data["skills"] + '\n' + '</pre>'
+        else:
+            return 'Такого кандидата у нас нет.'
 
     return img
 
@@ -52,6 +54,8 @@ def get_skill(x):
             skill += 'Имя кандидата: ' + data['name'] + '\n' + \
                      'Позиция кандидата: ' + data['position'] + '\n' + \
                      'Навыки через запятую: ' + data['skills'] + '\n' + '\n'
+        else:
+            return 'Кандидаты такой специальностью не владеют.'
 
     return '<pre>' + '\n' + skill + '</pre>'
 
