@@ -32,15 +32,14 @@ def get_img(x):
     img_read = get_candidates()
     img = ""
     for data in img_read:
-        if data["id"] == x:
+        if x == data["id"]:
             img += '<img src =' + data["picture"] + '>' + '\n' + '<pre>' + '\n' + \
                    'Имя кандидата:' + data["name"] + '\n' + \
                    'Позиция кандидата:' + data["position"] + '\n' + \
                    'Навыки через запятую:' + data["skills"] + '\n' + '</pre>'
+            return img
         else:
             return 'Такого кандидата у нас нет.'
-
-    return img
 
 
 # print(get_img(1))
